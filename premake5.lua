@@ -1,8 +1,8 @@
 project "yaml-cpp"
 	kind "StaticLib"
 	language "C++"
-  cppdialect "C++20"
-  staticruntime "off"
+	cppdialect "C++20"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -22,6 +22,10 @@ project "yaml-cpp"
 
 	filter "system:windows"
 		systemversion "latest"
+		defines
+        {
+            "yaml_cpp_EXPORTS"
+		}
 
 	filter "system:linux"
 		pic "On"
