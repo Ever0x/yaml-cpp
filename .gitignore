@@ -5,5 +5,5 @@ build/
 bin-int/
 bin/
 
-.vcxproj
-.vcxproj.filters
+*.vcxproj
+*.vcxproj.filters
